@@ -1,12 +1,10 @@
 package med.voll.api.domain.medico;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import med.voll.api.domain.endereco.Endereco;
 
 @Entity
 @Table(name = "medicos")
-@EqualsAndHashCode(of = "id")
 public class Medico {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
