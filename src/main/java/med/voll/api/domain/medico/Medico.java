@@ -23,7 +23,7 @@ public class Medico {
 
     public Medico(){}
 
-    public Medico(MedicoDTOCadastro medico) {
+    public Medico(DadosCadastroMedico medico) {
         this.nome = medico.nome();
         this.email = medico.email();
         this.telefone = medico.telefone();

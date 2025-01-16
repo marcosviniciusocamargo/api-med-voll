@@ -27,7 +27,10 @@ public class SecurityConfigurations {
                 .sessionManagement(sess -> sess
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers( "/login").permitAll()
+                        .requestMatchers( "/login",
+                                "/v3/api-docs/**",
+                                "/swagger-ui.html",
+                                "/swagger-ui/**").permitAll()
                         .anyRequest().authenticated()).addFilterBefore(securityFilter
                         ,UsernamePasswordAuthenticationFilter.class)
                 .build();
@@ -42,5 +45,7 @@ public class SecurityConfigurations {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
+
 
 }

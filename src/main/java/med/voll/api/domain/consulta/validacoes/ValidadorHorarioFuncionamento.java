@@ -1,7 +1,7 @@
 package med.voll.api.domain.consulta.validacoes;
 
 import med.voll.api.domain.ValidacaoException;
-import med.voll.api.domain.consulta.ConsultaDTO;
+import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
 import org.springframework.stereotype.Component;
 
 import java.time.DayOfWeek;
@@ -9,7 +9,7 @@ import java.time.DayOfWeek;
 @Component
 public class ValidadorHorarioFuncionamento implements ValidadorAgendamentoDeConsultas{
 
-    public void validar(ConsultaDTO dados){
+    public void validar(DadosAgendamentoConsulta dados){
         var dataConsulta = dados.data();
         var domingo = dataConsulta.getDayOfWeek().equals(DayOfWeek.SUNDAY);
         var antesDaAberturaDaClinica = dataConsulta.getHour() < 7;

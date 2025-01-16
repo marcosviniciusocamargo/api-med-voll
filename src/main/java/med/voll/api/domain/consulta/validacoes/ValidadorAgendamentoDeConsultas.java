@@ -1,10 +1,10 @@
 package med.voll.api.domain.consulta.validacoes;
 
-import med.voll.api.domain.consulta.ConsultaDTO;
+import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
 
 public interface ValidadorAgendamentoDeConsultas {
 
-    void validar(ConsultaDTO dados);
+    void validar(DadosAgendamentoConsulta dados);
 
 
 }

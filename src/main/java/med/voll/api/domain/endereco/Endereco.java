@@ -14,7 +14,7 @@ public class Endereco {
 
     public Endereco(){}
 
-    public Endereco(EnderecoDTO dados) {
+    public Endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
         this.cep = dados.cep();
@@ -24,7 +24,7 @@ public class Endereco {
         this.complemento = dados.complemento();
     }
 
-    public void atualizar(EnderecoDTO dados){
+    public void atualizar(DadosEndereco dados){
         if (dados.logradouro() != null) {
             this.logradouro = dados.logradouro();
         }
